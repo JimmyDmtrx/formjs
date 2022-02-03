@@ -1,3 +1,5 @@
+import StepTwo from "./StepTwo";
+
 const Form = (props) => {
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -32,7 +34,7 @@ const Form = (props) => {
         }}
       />
       <input
-        value={props.setVerifyPassword}
+        value={props.verifyPassword}
         type="password"
         placeholder="verify password"
         onChange={(event) => {
@@ -40,7 +42,19 @@ const Form = (props) => {
           console.log(event.target.value);
         }}
       />
-      <input type="submit" value={"Valider"} />
+      <input
+        type="submit"
+        value={"Valider"}
+        onClick={() => {
+          {
+            props.password === props.verifyPassword ? (
+              <StepTwo />
+            ) : (
+              alert("vos deux mots de passe sont incorrects")
+            );
+          }
+        }}
+      />
     </form>
   );
 };
