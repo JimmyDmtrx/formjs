@@ -1,5 +1,3 @@
-import StepTwo from "./StepTwo";
-
 const Form = (props) => {
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -46,12 +44,10 @@ const Form = (props) => {
         type="submit"
         value={"Valider"}
         onClick={() => {
-          {
-            props.password === props.verifyPassword ? (
-              <StepTwo />
-            ) : (
-              alert("vos deux mots de passe sont incorrects")
-            );
+          if (props.password === props.verifyPassword) {
+            props.setStep(2);
+          } else {
+            alert("mdp pas ok");
           }
         }}
       />
