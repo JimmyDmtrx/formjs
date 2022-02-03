@@ -5,7 +5,7 @@ const Form = (props) => {
   return (
     <form className="form" onSubmit={handleSubmit}>
       <input
-        value={username.props}
+        value={props.username}
         type="text"
         placeholder="username"
         onChange={(event) => {
@@ -14,7 +14,7 @@ const Form = (props) => {
         }}
       />
       <input
-        value={email.props}
+        value={props.email}
         type="email"
         placeholder="email"
         onChange={(event) => {
@@ -23,7 +23,7 @@ const Form = (props) => {
         }}
       />
       <input
-        value={password.props}
+        value={props.password}
         type="password"
         placeholder="password"
         onChange={(event) => {
@@ -32,7 +32,7 @@ const Form = (props) => {
         }}
       />
       <input
-        value={verifyPassword.props}
+        value={props.setVerifyPassword}
         type="password"
         placeholder="verify password"
         onChange={(event) => {

@@ -20,9 +20,6 @@ function App() {
         verifyPassword={verifyPassword}
         setVerifyPassword={setVerifyPassword}
       />
-      {/* <Form />
-      <Form />
-      <Form /> */}
       <Footer />
     </div>
   );
